@@ -1869,7 +1869,7 @@
 
 1655659282 c:\wxwidgets-3.0.5\include\wx\msw\rcdefs.h
 
-1671021680 source:c:\michal\projekt z programowania\pingu\pinguapp.cpp
+1671494281 source:c:\michal\projekt z programowania\pingu\pinguapp.cpp
 	"PinguApp.h"
 	"PinguMain.h"
 	<wx/image.h>
@@ -3560,7 +3560,7 @@
 1587557368 c:\michal\widgets\wxwidgets-3.0.5\include\wx\univ\theme.h
 	"wx/string.h"
 
-1671483340 c:\michal\projekt z programowania\pingu\pingumain.h
+1671494402 c:\michal\projekt z programowania\pingu\pingumain.h
 	<map>
 	<iostream>
 	<wx/bmpbuttn.h>
@@ -3721,7 +3721,7 @@
 1587557368 c:\michal\widgets\wxwidgets-3.0.5\include\wx\os2\stattext.h
 	"wx/control.h"
 
-1671484759 source:c:\michal\projekt z programowania\pingu\pingumain.cpp
+1671629741 source:c:\michal\projekt z programowania\pingu\pingumain.cpp
 	"PinguMain.h"
 	<wx/msgdlg.h>
 	<iostream>
@@ -3731,6 +3731,7 @@
 	<wx/image.h>
 	<wx/intl.h>
 	<wx/string.h>
+	"Panel.h"
 
 1587557368 c:\michal\widgets\wxwidgets-3.0.5\include\wx\msgdlg.h
 	"wx/defs.h"
@@ -3786,8 +3787,76 @@
 
 1587557368 c:\michal\widgets\wxwidgets-3.0.5\include\wx\msw\rcdefs.h
 
-1671482189 source:c:\michal\projekt z programowania\pingu\src\pou.cpp
+1671630149 source:c:\michal\projekt z programowania\pingu\src\pou.cpp
 	"pou.h"
 
-1671482284 c:\michal\projekt z programowania\pingu\include\pou.h
+1671630218 c:\michal\projekt z programowania\pingu\include\pou.h
+	<ctype.h>
+
+1671630149 source:c:\michal\projekt z programowania\pingu\panel.cpp
+	"Panel.h"
+	<wx/bitmap.h>
+	<wx/font.h>
+	<wx/image.h>
+	<wx/intl.h>
+	<wx/string.h>
+	<wx/msgdlg.h>
+	<iostream>
+	"pou.h"
+
+1671629820 c:\michal\projekt z programowania\pingu\panel.h
+	"pou.h"
+	<wx/button.h>
+	<wx/dialog.h>
+	<wx/sizer.h>
+	<wx/statbmp.h>
+	<wx/stattext.h>
+
+1587557368 c:\michal\widgets\wxwidgets-3.0.5\include\wx\statbmp.h
+	"wx/defs.h"
+	"wx/control.h"
+	"wx/bitmap.h"
+	"wx/icon.h"
+	"wx/univ/statbmp.h"
+	"wx/msw/statbmp.h"
+	"wx/motif/statbmp.h"
+	"wx/gtk/statbmp.h"
+	"wx/gtk1/statbmp.h"
+	"wx/osx/statbmp.h"
+	"wx/cocoa/statbmp.h"
+	"wx/os2/statbmp.h"
+
+1587557368 c:\michal\widgets\wxwidgets-3.0.5\include\wx\univ\statbmp.h
+	"wx/bitmap.h"
+
+1587557368 c:\michal\widgets\wxwidgets-3.0.5\include\wx\msw\statbmp.h
+	"wx/control.h"
+	"wx/icon.h"
+	"wx/bitmap.h"
+
+1587557368 c:\michal\widgets\wxwidgets-3.0.5\include\wx\motif\statbmp.h
+	"wx/motif/bmpmotif.h"
+	"wx/icon.h"
+
+1587557368 c:\michal\widgets\wxwidgets-3.0.5\include\wx\gtk\statbmp.h
+	"wx/icon.h"
+
+1587557368 c:\michal\widgets\wxwidgets-3.0.5\include\wx\gtk1\statbmp.h
+	"wx/icon.h"
+
+1587557368 c:\michal\widgets\wxwidgets-3.0.5\include\wx\osx\statbmp.h
+	"wx/osx/carbon/statbmp.h"
+	"wx/generic/statbmpg.h"
+
+1587557368 c:\michal\widgets\wxwidgets-3.0.5\include\wx\osx\carbon\statbmp.h
+	"wx/icon.h"
+
+1587557368 c:\michal\widgets\wxwidgets-3.0.5\include\wx\generic\statbmpg.h
+	"wx/statbmp.h"
+
+1587557368 c:\michal\widgets\wxwidgets-3.0.5\include\wx\cocoa\statbmp.h
+
+1587557368 c:\michal\widgets\wxwidgets-3.0.5\include\wx\os2\statbmp.h
+	"wx/control.h"
+	"wx/icon.h"
 

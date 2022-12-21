@@ -79,7 +79,8 @@ PinguDialog::PinguDialog(wxWindow* parent,wxWindowID id)
     wxFlexGridSizer* FlexGridSizer1;
     wxFlexGridSizer* FlexGridSizer2;
 
-    Create(parent, id, _("PINGU"), wxDefaultPosition, wxDefaultSize, wxDEFAULT_DIALOG_STYLE|wxCLOSE_BOX|wxMINIMIZE_BOX, _T("id"));
+    Create(parent, wxID_ANY, _("PINGU"), wxDefaultPosition, wxDefaultSize, wxDEFAULT_DIALOG_STYLE|wxCLOSE_BOX|wxMAXIMIZE_BOX|wxMINIMIZE_BOX, _T("wxID_ANY"));
+    SetBackgroundColour(wxColour(218,239,239));
     FlexGridSizer1 = new wxFlexGridSizer(3, 1, 0, 0);
     StaticText1 = new wxStaticText(this, ID_STATICTEXT1, _("Wybierz swoją postać"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT1"));
     wxFont StaticText1Font(18,wxFONTFAMILY_SWISS,wxFONTSTYLE_NORMAL,wxFONTWEIGHT_BOLD,false,_T("Arial"),wxFONTENCODING_DEFAULT);
@@ -124,6 +125,7 @@ PinguDialog::PinguDialog(wxWindow* parent,wxWindowID id)
     SetSizer(FlexGridSizer1);
     FlexGridSizer1->Fit(this);
     FlexGridSizer1->SetSizeHints(this);
+    Center();
 
     Connect(ID_BITMAPBUTTON1,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&PinguDialog::OnBitmapButton0Click);
     //*)
@@ -133,10 +135,16 @@ PinguDialog::PinguDialog(wxWindow* parent,wxWindowID id)
     pola[2]=BitmapButton2;
     pola[3]=BitmapButton3;
 
+    obrazki[0]=wxBitmap(wxImage(_T("images\\szeregowy.jpg")));
+    obrazki[1]=wxBitmap(wxImage(_T("images\\skipper.jpeg")));
+    obrazki[2]=wxBitmap(wxImage(_T("images\\rico.jpg")));
+    obrazki[3]=wxBitmap(wxImage(_T("images\\kowalski.jpg")));
+
+
      for(int i=0;i<4;i++){
         Connect(pola[i]->GetId(),wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&PinguDialog::OnBitmapButton0Click);
-        id_to_nr[pola[i]->GetId()]=i;
-     }
+        id_to_nr[pola[i]->GetId()]=i;}
+
 }
 
 PinguDialog::~PinguDialog()
@@ -156,11 +164,17 @@ void PinguDialog::OnAbout(wxCommandEvent& event)
     wxMessageBox(msg, _("Welcome to..."));
 }
 
+#include "Panel.h"
+
+
+int numer_pingwina=-1;
+
 void PinguDialog::OnBitmapButton0Click(wxCommandEvent& event)
 {
     int id=event.GetId();
     int nr=id_to_nr[id];
-    wxString w;
-    w<<nr;
-    wxMessageBox(w);
+    numer_pingwina = nr;
+    Panel * np = new Panel(this);
+    np->ShowModal();
+    delete np;
 }
