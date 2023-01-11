@@ -11,8 +11,11 @@
 #include <wx/msgdlg.h>
 #include <iostream>
 #include "pou.h"
+#include "wx/sound.h"
 
 using namespace std;
+
+int x=0;
 
 //(*IdInit(Panel)
 const long Panel::ID_STATICTEXT1 = wxNewId();
@@ -20,7 +23,7 @@ const long Panel::ID_BUTTON1 = wxNewId();
 const long Panel::ID_BUTTON2 = wxNewId();
 const long Panel::ID_BUTTON3 = wxNewId();
 const long Panel::ID_BUTTON4 = wxNewId();
-const long Panel::ID_STATICBITMAP1 = wxNewId();
+const long Panel::ID_BITMAPBUTTON1 = wxNewId();
 //*)
 
 BEGIN_EVENT_TABLE(Panel,wxDialog)
@@ -36,7 +39,6 @@ Panel::Panel(wxWindow* parent,wxWindowID id)
 	//(*Initialize(Panel)
 	wxFlexGridSizer* FlexGridSizer1;
 	wxFlexGridSizer* FlexGridSizer2;
-	wxFlexGridSizer* FlexGridSizer3;
 
 	Create(parent, wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxDEFAULT_DIALOG_STYLE, _T("wxID_ANY"));
 	SetBackgroundColour(wxColour(218,239,239));
@@ -55,10 +57,8 @@ Panel::Panel(wxWindow* parent,wxWindowID id)
 	Button4 = new wxButton(this, ID_BUTTON4, _("Od nowa"), wxDefaultPosition, wxSize(300,60), 0, wxDefaultValidator, _T("ID_BUTTON4"));
 	FlexGridSizer2->Add(Button4, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	FlexGridSizer1->Add(FlexGridSizer2, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	FlexGridSizer3 = new wxFlexGridSizer(0, 3, 0, 0);
-	StaticBitmap1 = new wxStaticBitmap(this, ID_STATICBITMAP1, wxBitmap(wxImage(_T("C:\\Michal\\projekt z programowania\\Pingu\\images\\baby.jpg"))), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICBITMAP1"));
-	FlexGridSizer3->Add(StaticBitmap1, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	FlexGridSizer1->Add(FlexGridSizer3, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	BitmapButton5 = new wxBitmapButton(this, ID_BITMAPBUTTON1, wxBitmap(wxImage(_T("images\\baby.jpg"))), wxDefaultPosition, wxDefaultSize, wxBU_AUTODRAW, wxDefaultValidator, _T("ID_BITMAPBUTTON1"));
+	FlexGridSizer1->Add(BitmapButton5, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	SetSizer(FlexGridSizer1);
 	FlexGridSizer1->Fit(this);
 	FlexGridSizer1->SetSizeHints(this);
@@ -70,8 +70,16 @@ Panel::Panel(wxWindow* parent,wxWindowID id)
 	Connect(ID_BUTTON4,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&Panel::OnButton4Click);
 	//*)
 
-	wxString xx="xxx "; xx << numer_pingwina;
-	wxMessageBox(xx);
+
+    obrazki[0]=wxBitmap(wxImage(_T("images\\szeregowybrudas.png")));
+    obrazki[1]=wxBitmap(wxImage(_T("images\\skipperbrudas.jpg")));
+    obrazki[2]=wxBitmap(wxImage(_T("images\\ricobrudas.jpg")));
+    obrazki[3]=wxBitmap(wxImage(_T("images\\kowalskibrudas.jpg")));
+    obrazki[4]=wxBitmap(wxImage(_T("images\\babybrudas.jpg")));
+
+
+    Fit();
+        SetIcon(wxICON(aaaa));
 
 }
 
@@ -80,25 +88,56 @@ Panel::~Panel()
 	//(*Destroy(Panel)
 	//*)
 }
-
+#include <unistd.h>
 
 void Panel::OnButton1Click(wxCommandEvent& event)
 {
+    x++;
+    Sleep(2000);
+    BitmapButton5->SetBitmap(obrazki[4]);
 
+    //wxSound * mySound;
+	//mySound = new wxSound (_T("Minecraft-eating-sound-effect.wav"), false );
+    if(x<3){
+        Sleep(2000);
+    BitmapButton5->SetBitmap(obrazki[4]);
+    }
+    if(x==3){
+      BitmapButton5->SetBitmap(obrazki[nr_pingwina]);
+        sleep
+        BitmapButton5->SetBitmap(obrazki[4]);
+    }
+    if (x>3){
+        sleep
+        budasduzy
+    }
 
 }
 
 void Panel::OnButton2Click(wxCommandEvent& event)
 {
-
+    /**
+    if(x<3){
+        maly czysty
+    }else{
+    duzy czysty
+    }
+**/
 }
+
+#include "Panel.h"
+#include "PinguApp.h"
+#include "Gra.h"
 
 void Panel::OnButton3Click(wxCommandEvent& event)
 {
+    Gra * np = new Gra(this);
+    np->ShowModal();
+    delete np;
 
 }
 
 void Panel::OnButton4Click(wxCommandEvent& event)
 {
-    xxx.reset();
+    this -> Destroy();
 }

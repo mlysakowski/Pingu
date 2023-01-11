@@ -59,17 +59,22 @@
 			<Add library="libwsock32.a" />
 			<Add library="libodbc32.a" />
 		</Linker>
+		<Unit filename="Gra.cpp" />
+		<Unit filename="Gra.h" />
 		<Unit filename="Panel.cpp" />
 		<Unit filename="Panel.h" />
 		<Unit filename="PinguApp.cpp" />
 		<Unit filename="PinguApp.h" />
 		<Unit filename="PinguMain.cpp" />
 		<Unit filename="PinguMain.h" />
+		<Unit filename="include/pkn.h" />
 		<Unit filename="include/pou.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
+		<Unit filename="src/pkn.cpp" />
 		<Unit filename="src/pou.cpp" />
+		<Unit filename="wxsmith/Gra.wxs" />
 		<Unit filename="wxsmith/Panel.wxs" />
 		<Unit filename="wxsmith/Pingudialog.wxs" />
 		<Extensions>
@@ -79,6 +84,7 @@
 				<resources>
 					<wxDialog wxs="wxsmith/Pingudialog.wxs" src="PinguMain.cpp" hdr="PinguMain.h" fwddecl="0" i18n="1" name="PinguDialog" language="CPP" />
 					<wxDialog wxs="wxsmith/Panel.wxs" src="Panel.cpp" hdr="Panel.h" fwddecl="0" i18n="1" name="Panel" language="CPP" />
+					<wxDialog wxs="wxsmith/Gra.wxs" src="Gra.cpp" hdr="Gra.h" fwddecl="0" i18n="1" name="Gra" language="CPP" />
 				</resources>
 			</wxsmith>
 		</Extensions>

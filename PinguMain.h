@@ -72,10 +72,12 @@ class PinguDialog: public wxDialog
         wxStaticText* StaticText9;
         //*)
 
-        DECLARE_EVENT_TABLE()
-        wxBitmapButton * pola[4];
-        map<int,int> id_to_nr;
-        wxBitmap obrazki[4];
+        protected:
+
+            DECLARE_EVENT_TABLE()
+            wxBitmapButton * pola[4];
+            map<int,int> id_to_nr;
+            wxBitmap obrazki[4];
 };
 
 #endif // PINGUMAIN_H

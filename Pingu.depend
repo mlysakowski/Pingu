@@ -3560,7 +3560,7 @@
 1587557368 c:\michal\widgets\wxwidgets-3.0.5\include\wx\univ\theme.h
 	"wx/string.h"
 
-1671494402 c:\michal\projekt z programowania\pingu\pingumain.h
+1673113376 c:\michal\projekt z programowania\pingu\pingumain.h
 	<map>
 	<iostream>
 	<wx/bmpbuttn.h>
@@ -3721,7 +3721,7 @@
 1587557368 c:\michal\widgets\wxwidgets-3.0.5\include\wx\os2\stattext.h
 	"wx/control.h"
 
-1671629741 source:c:\michal\projekt z programowania\pingu\pingumain.cpp
+1673439705 source:c:\michal\projekt z programowania\pingu\pingumain.cpp
 	"PinguMain.h"
 	<wx/msgdlg.h>
 	<iostream>
@@ -3767,7 +3767,7 @@
 
 1587557368 c:\michal\widgets\wxwidgets-3.0.5\include\wx\os2\msgdlg.h
 
-1584205418 source:c:\michal\projekt z programowania\pingu\resource.rc
+1673439705 source:c:\michal\projekt z programowania\pingu\resource.rc
 	"wx/msw/wx.rc"
 
 1587557368 c:\michal\widgets\wxwidgets-3.0.5\include\wx\msw\wx.rc
@@ -3793,7 +3793,7 @@
 1671630218 c:\michal\projekt z programowania\pingu\include\pou.h
 	<ctype.h>
 
-1671630149 source:c:\michal\projekt z programowania\pingu\panel.cpp
+1673440546 source:c:\michal\projekt z programowania\pingu\panel.cpp
 	"Panel.h"
 	<wx/bitmap.h>
 	<wx/font.h>
@@ -3803,13 +3803,17 @@
 	<wx/msgdlg.h>
 	<iostream>
 	"pou.h"
+	<unistd.h>
+	"Panel.h"
+	"PinguApp.h"
+	"Gra.h"
 
-1671629820 c:\michal\projekt z programowania\pingu\panel.h
+1673444025 c:\michal\projekt z programowania\pingu\panel.h
 	"pou.h"
+	<wx/bmpbuttn.h>
 	<wx/button.h>
 	<wx/dialog.h>
 	<wx/sizer.h>
-	<wx/statbmp.h>
 	<wx/stattext.h>
 
 1587557368 c:\michal\widgets\wxwidgets-3.0.5\include\wx\statbmp.h
@@ -3859,4 +3863,36 @@
 1587557368 c:\michal\widgets\wxwidgets-3.0.5\include\wx\os2\statbmp.h
 	"wx/control.h"
 	"wx/icon.h"
+
+1673440522 source:c:\michal\projekt z programowania\pingu\gra.cpp
+	"Gra.h"
+	<wx/bitmap.h>
+	<wx/image.h>
+	<wx/intl.h>
+	<wx/string.h>
+	<wx/msgdlg.h>
+	<iostream>
+	"pou.h"
+	"pkn.h"
+	<cstdlib>
+
+1672694854 c:\michal\projekt z programowania\pingu\gra.h
+	"pou.h"
+	"pkn.h"
+	<wx/bmpbuttn.h>
+	<wx/dialog.h>
+	<wx/sizer.h>
+
+1672695453 c:\michal\projekt z programowania\pingu\include\pkn.h
+	<iostream>
+	<cstring>
+	<cstdlib>
+	<ctime>
+
+1672697358 source:c:\michal\projekt z programowania\pingu\src\pkn.cpp
+	"pkn.h"
+	<iostream>
+	<cstring>
+	<cstdlib>
+	<ctime>
 

@@ -135,6 +135,7 @@ PinguDialog::PinguDialog(wxWindow* parent,wxWindowID id)
     pola[2]=BitmapButton2;
     pola[3]=BitmapButton3;
 
+
     obrazki[0]=wxBitmap(wxImage(_T("images\\szeregowy.jpg")));
     obrazki[1]=wxBitmap(wxImage(_T("images\\skipper.jpeg")));
     obrazki[2]=wxBitmap(wxImage(_T("images\\rico.jpg")));
@@ -144,6 +145,9 @@ PinguDialog::PinguDialog(wxWindow* parent,wxWindowID id)
      for(int i=0;i<4;i++){
         Connect(pola[i]->GetId(),wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&PinguDialog::OnBitmapButton0Click);
         id_to_nr[pola[i]->GetId()]=i;}
+
+        Fit();
+        SetIcon(wxICON(aaaa));
 
 }
 
