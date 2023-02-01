@@ -30,6 +30,8 @@ class PinguDialog: public wxDialog
         PinguDialog(wxWindow* parent,wxWindowID id = -1);
         virtual ~PinguDialog();
 
+
+
     private:
 
         //(*Handlers(PinguDialog)
@@ -78,6 +80,7 @@ class PinguDialog: public wxDialog
             wxBitmapButton * pola[4];
             map<int,int> id_to_nr;
             wxBitmap obrazki[4];
+
 };
 
 #endif // PINGUMAIN_H

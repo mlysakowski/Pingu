@@ -39,7 +39,6 @@ class Gra: public wxDialog
 		//*)
 
 		DECLARE_EVENT_TABLE()
-		pkn zzz;
 };
 
 #endif

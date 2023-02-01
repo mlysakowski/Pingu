@@ -32,18 +32,21 @@
 			</Target>
 		</Build>
 		<Compiler>
+			<Add option="-Wall" />
 			<Add option="-pipe" />
 			<Add option="-mthreads" />
 			<Add option="-D__GNUWIN32__" />
 			<Add option="-D__WXMSW__" />
 			<Add option="-DwxUSE_UNICODE" />
-			<Add option="-Wall" />
 			<Add directory="$(#wx)/include" />
 		</Compiler>
 		<ResourceCompiler>
 			<Add directory="$(#wx)/include" />
 		</ResourceCompiler>
 		<Linker>
+			<Add option="-static-libstdc++" />
+			<Add option="-static-libgcc" />
+			<Add option="-static" />
 			<Add option="-mthreads" />
 			<Add library="libkernel32.a" />
 			<Add library="libuser32.a" />
@@ -67,13 +70,9 @@
 		<Unit filename="PinguApp.h" />
 		<Unit filename="PinguMain.cpp" />
 		<Unit filename="PinguMain.h" />
-		<Unit filename="include/pkn.h" />
-		<Unit filename="include/pou.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
-		<Unit filename="src/pkn.cpp" />
-		<Unit filename="src/pou.cpp" />
 		<Unit filename="wxsmith/Gra.wxs" />
 		<Unit filename="wxsmith/Panel.wxs" />
 		<Unit filename="wxsmith/Pingudialog.wxs" />
