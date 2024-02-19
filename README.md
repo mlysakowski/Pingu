@@ -1,13 +1,5 @@
 # Pingu
 Projekt z programowania c++ semestr 3
 
-19.12.2022 
-
-pierwsze okno mniej wiecej gotowe, jak klikasz w pingwina to wstepnie pokazuja ci sie cyferki.
-
-21.12.2022
-
-zrobilismy 2gie okno i dziala z pierwszym.
-teraz trzeba zaprogramowac przyciski.
-jedzenie i mycie
-papier kamien nozyce i od nowa czyli wracamy do 1 okna.
+Gra polegająca na posiadaniu swojego Pingwina, wybieramy jednego z 4 możliwych, oraz dbanie o niego, karmienie go, mycie i zabawe z nim.
+Projekt napisany w ramach zaliczenia przedmiotu Projekt z programowania na 3cim semestrze studiów.
