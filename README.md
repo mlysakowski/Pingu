@@ -9,5 +9,5 @@ pierwsze okno mniej wiecej gotowe, jak klikasz w pingwina to wstepnie pokazuja c
 
 zrobilismy 2gie okno i dziala z pierwszym.
 teraz trzeba zaprogramowac przyciski.
-jedzenie i mycie to to samo xdd
+jedzenie i mycie
 papier kamien nozyce i od nowa czyli wracamy do 1 okna.
